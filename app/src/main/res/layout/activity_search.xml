@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SearchActivity">
+
+    <EditText
+        android:id="@+id/fozoQuery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Főző"/>
+    <EditText
+        android:id="@+id/gyumolcsQuery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Gyümölcs"/>
+
+    <Button
+        android:id="@+id/palinkaQueryBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Keresés"/>
+    <Button
+        android:id="@+id/backFromQueryBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vissza"/>
+
+    <TextView
+        android:id="@+id/queryResultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"/>
+
+</LinearLayout>

@@ -68,4 +68,21 @@ class DBHandler(var context:Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
 
         return list
     }
+
+    fun query(f: String, gy: String) : String{
+        val list = this.listPalinka()
+        var retString = String();
+
+        for (p in list) {
+            if (p.fozo == f && p.gyumolcs == gy) {
+                retString = "Alkoholtartalom: " + p.alkohol.toString() + "%"
+            }
+        }
+
+        if (retString.isEmpty()) {
+            retString = "Ilyen főző/gyümölcs kombináció nem szerepel az adatbázisban"
+        }
+
+        return retString
+    }
 }

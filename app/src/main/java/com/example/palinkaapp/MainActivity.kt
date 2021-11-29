@@ -11,7 +11,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var searchBtn: Button
     private lateinit var listBtn: Button
     private lateinit var resultText: TextView
-    private lateinit var db: DBHandler
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +22,13 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
+        searchBtn.setOnClickListener {
+            startActivity(Intent(applicationContext, SearchActivity::class.java))
+            finish()
+        }
+
         listBtn.setOnClickListener {
+            val db = DBHandler(this)
             val data = db.listPalinka()
             resultText.text = ""
             for (p in data) {
@@ -40,6 +45,5 @@ class MainActivity : AppCompatActivity() {
         searchBtn = findViewById(R.id.searchBtn)
         listBtn = findViewById(R.id.listBtn)
         resultText = findViewById(R.id.resultText)
-        db = DBHandler(this)
     }
 }
