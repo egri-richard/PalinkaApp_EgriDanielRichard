@@ -6,12 +6,16 @@ class Palinka {
     var gyumolcs: String = ""
     var alkohol: Int = 0
 
+    constructor(Fozo: String, Gyumolcs: String, Alkohol: Int) {
+        this.fozo = Fozo
+        this.gyumolcs = Gyumolcs
+        this.alkohol = Alkohol
+    }
+
     constructor(Id: Int, Fozo: String, Gyumolcs: String, Alkohol: Int) {
         this.id = Id
         this.fozo = Fozo
         this.gyumolcs = Gyumolcs
         this.alkohol = Alkohol
     }
-
-    constructor()
 }

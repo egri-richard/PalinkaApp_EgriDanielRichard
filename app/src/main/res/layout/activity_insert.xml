@@ -5,39 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".InsertActivity">
 
-    <Button
-        android:id="@+id/addBtn"
+    <EditText
+        android:id="@+id/fozoIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Pálinka felvétele"/>
-
-    <Button
-        android:id="@+id/searchBtn"
+        android:hint="Főző"/>
+    <EditText
+        android:id="@+id/gyumolcsIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Pálinka keresése"/>
-
-    <Button
-        android:id="@+id/listBtn"
+        android:hint="Gyümölcs"/>
+    <EditText
+        android:id="@+id/alkoholIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Pálinkák listázása"/>
+        android:hint="Alkohol %"
+        android:inputType="number"
+        android:maxLength="2"/>
 
-    <ScrollView
+    <Button
+        android:id="@+id/insertBtn"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/resultText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    </ScrollView>
-
+        android:layout_height="wrap_content"
+        android:text="Rögzít"/>
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vissza"/>
 
 </LinearLayout>
